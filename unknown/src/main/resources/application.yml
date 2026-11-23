@@ -28,6 +28,10 @@ spring:
       host: ${REDIS_HOST}
       port: ${REDIS_PORT}
 
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY}
+  model: claude-sonnet-5-5
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html

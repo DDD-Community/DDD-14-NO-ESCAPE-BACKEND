@@ -12,6 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -37,7 +38,8 @@ public class ChatRoom extends CreatedAtEntity {
     @JoinColumn(name = "story_id", nullable = false)
     private Story story;
 
-    public ChatRoom(User user, Story story) {
+    @Builder
+    private ChatRoom(User user, Story story) {
         this.user = user;
         this.story = story;
     }

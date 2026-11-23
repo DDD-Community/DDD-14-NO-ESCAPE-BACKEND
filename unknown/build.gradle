@@ -39,6 +39,9 @@ dependencies {
 	// Redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
+	// Claude API
+	implementation 'com.anthropic:anthropic-java:3.2.0'
+
 	// Health-Check
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 

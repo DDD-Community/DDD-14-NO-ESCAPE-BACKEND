@@ -11,6 +11,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -34,7 +35,8 @@ public class Report extends CreatedAtEntity {
     @JoinColumn(name = "message_id", nullable = false)
     private Message message;
 
-    public Report(Message message) {
+    @Builder
+    private Report(Message message) {
         this.message = message;
     }
 }

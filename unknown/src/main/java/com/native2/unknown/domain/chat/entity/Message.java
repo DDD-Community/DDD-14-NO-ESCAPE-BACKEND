@@ -13,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -46,7 +47,8 @@ public class Message extends CreatedAtEntity {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
 
-    public Message(ChatRoom chatRoom, MessageRole role, String content) {
+    @Builder
+    private Message(ChatRoom chatRoom, MessageRole role, String content) {
         this.chatRoom = chatRoom;
         this.role = role;
         this.content = content;

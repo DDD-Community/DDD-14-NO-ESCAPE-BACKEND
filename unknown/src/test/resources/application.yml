@@ -12,3 +12,7 @@ spring:
 
 cors:
   allowed-origins: http://localhost:3000
+
+anthropic:
+  api-key: test-key
+  model: claude-sonnet-5-5

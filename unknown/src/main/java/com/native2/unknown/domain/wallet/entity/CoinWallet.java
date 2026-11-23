@@ -14,6 +14,7 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.Instant;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -51,7 +52,8 @@ public class CoinWallet {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
-    public CoinWallet(User user) {
+    @Builder
+    private CoinWallet(User user) {
         this.user = user;
         this.balance = 0;
     }

@@ -41,7 +41,11 @@ public enum ErrorCode {
 
     // 채팅 관련 에러
     CHAT_ROOM_NOT_FOUND(HttpStatus.NOT_FOUND, "CHAT_ROOM_NOT_FOUND", "채팅방을 찾을 수 없습니다."),
-    MESSAGE_NOT_FOUND(HttpStatus.NOT_FOUND, "MESSAGE_NOT_FOUND", "메시지를 찾을 수 없습니다.");
+    MESSAGE_NOT_FOUND(HttpStatus.NOT_FOUND, "MESSAGE_NOT_FOUND", "메시지를 찾을 수 없습니다."),
+
+    // AI 관련 에러
+    AI_API_ERROR(HttpStatus.BAD_GATEWAY, "AI_API_ERROR", "AI 응답을 받지 못했습니다."),
+    AI_REFUSED(HttpStatus.UNPROCESSABLE_ENTITY, "AI_REFUSED", "AI가 답변할 수 없는 요청입니다.");
 
     /**
      * 상태 코드
